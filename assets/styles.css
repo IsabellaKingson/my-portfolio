@@ -1,11 +1,14 @@
 :root {
-  --primary: #eeeee4;
+  --primary: #F1E7CE;
   --secondary: #312247;
-  --tertiary: #a465c3;
+  --tertiary: #F0C862;
 }
 
 body {
   background-color: var(--primary);
+  position: absolute;
+  top: 90px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -44,4 +47,26 @@ nav li a:hover {
 
 nav li a:active {
   scroll-behavior: smooth;
+}
+
+section > :not(h2) {
+  background-color: var(--tertiary);
+  margin: 10px 20px 15px 130px;
+  padding: 15px;
+  border-radius: 25px;
+  color: var(--secondary);
+}
+
+h2 {
+  position: absolute;
+  color: var(--secondary);
+}
+
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-me p {
+  max-width: 60%;
 }

@@ -1,0 +1,47 @@
+:root {
+  --primary: #eeeee4;
+  --secondary: #312247;
+  --tertiary: #a465c3;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+header {
+  color: var(--primary);
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 20px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav ul {
+  list-style: none;
+  position: absolute;
+  right: 30px;
+  top: 1.7em;
+}
+nav li {
+  display: inline;
+  margin: 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+nav li a:hover {
+  color: #f04fbd;
+}
+
+nav li a:active {
+  scroll-behavior: smooth;
+}

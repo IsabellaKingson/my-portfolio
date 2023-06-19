@@ -64,10 +64,20 @@ h2 {
 .about-me {
   display: flex;
   flex-wrap: wrap;
+  align-items: ;
+  justify-content: space-between;
 }
 
 .about-me p {
-  max-width: 60%;
+  max-width: 50%;
+  padding: 25px;
+  font-size: 20px;
+  align-self: center;
+}
+
+.about-me img {
+  max-width: 30%;
+  margin-left: 10px;
 }
 
 .cards {

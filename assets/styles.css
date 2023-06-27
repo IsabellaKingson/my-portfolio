@@ -1,3 +1,4 @@
+/* These are the colors for the page */
 :root {
   --primary: #f1e7ce;
   --secondary: #312247;
@@ -7,79 +8,100 @@
 }
 
 body {
+  /* Sets main styles for the page */
   background-color: var(--primary);
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Adjusts the content's starting position so that it is not hidden behind the header */
   position: absolute;
   top: 90px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
+  /* Colors */
   color: var(--primary);
   background-color: var(--secondary);
+
+  /* Positioning and spacing */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px 20px;
-  margin: 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
+  padding: 5px 20px;
+  margin: 0;
 }
 
 nav ul {
+  /* Style */
   list-style: none;
+
+  /* Positioning and spacing */
   position: absolute;
   right: 30px;
   top: 1.7em;
 }
 nav li {
+  /* Positioning and spacing */
   display: inline;
   margin: 10px;
 }
 
 nav li a {
-  text-decoration: none;
+  /* Style */
   color: var(--primary);
+  text-decoration: none;
 }
 
 nav li a:hover {
+  /* Links shift color when scrolled over */
   color: #f04fbd;
 }
 
 section > :not(h2) {
+  /* Colors */
   background-color: var(--tertiary);
+  color: var(--secondary);
+
+  /* Positioning and spacing */
   margin: 10px 20px 15px 130px;
   padding: 15px;
   border-radius: 25px;
-  color: var(--secondary);
 }
 
 h2 {
-  position: absolute;
+  /* Color */
   color: var(--secondary);
+
+  /* Positioning and spacing */
+  position: absolute;
 }
 
 .about-me {
+  /* Positioning and spacing */
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 .about-me p {
-  max-width: 50%;
+  /* Positioning and spacing */
   padding: 25px;
   font-size: 20px;
   align-self: flex-start;
 }
 
 .about-me img {
-  max-width: 30%;
+  /* Positioning and spacing */
+  max-width: 40%;
   margin-left: 10px;
 }
 
 .cards {
+  /* Positioning and spacing */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -87,33 +109,45 @@ h2 {
 }
 
 .card {
-  width: 31%;
+  /* Colors */
   background-color: var(--quarternary);
-  border-radius: 20px;
-  margin: 10px;
-  height: 220px;
-  transition-property: all;
-  transition-duration: 1s;
+  color: var(--secondary);
+
+  /* Style */
+  text-decoration: none;
+
+  /* Positioning and spacing */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  text-decoration: none;
-  color: var(--secondary);
+  width: 31%;
+  height: 220px;
+  margin: 10px;
+  border-radius: 20px;
+
+  /* Card hover transition prep */
+  transition-property: all;
+  transition-duration: 1s;
 }
 
 .card:first-child {
+  /* Positioning and spacing */
   width: 100%;
   height: 240px;
 }
 
 .card h3 {
+  /* Color */
   background-color: var(--fifth-color);
+
+  /* Positioning and spacing */
   width: 100%;
   padding: 5px 0px;
 }
 
 .card p {
+  /* Wasn't sure how to display this, but would like to hold the content there in case I want to use it in the future */
   display: none;
 }
 
@@ -137,9 +171,10 @@ h2 {
   background-size: cover;
 }
 
+/* Card hover transition */
 .card:hover {
-  transform: scale(1.1);
   border: solid var(--fifth-color);
+  transform: scale(1.1);
 }
 
 .contact-me {
@@ -156,27 +191,33 @@ h2 {
   padding-right: 20px;
 }
 
+/* Media Query for tablets */
 @media (max-width: 1000px) {
+  /* Centers the sections */
   section > :not(h2) {
     margin: 10px;
   }
+
+  /* Puts  the h2 back into the flow of content and centers it instead of beeing side by side with respective sections */
   h2 {
     position: static;
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
   }
+
+/* Changes about section from a row to a column */
   .about-me {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
   }
+
+  /* Spacing adjustments */
   .about-me p {
     max-width: 100%;
     align-self: center;
-  }
-  h2 {
-    display: flex;
-    justify-content: center;
-    font-size: 1.8em;
   }
   .cards {
     padding: 5px;
@@ -187,7 +228,10 @@ h2 {
     margin: 10px;
   }
 }
+
+/* Media Query for smartphones */
 @media (max-width: 600px) {
+  /* Puts header back into the normal flow of content and stacks the navigation bar under the h1 */
   body {
     top: 0;
   }
@@ -204,30 +248,29 @@ h2 {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .about-me {
-    display: block;
-  }
+
+  /* Image size adjustment */
   .about-me img {
     max-width: 85%;
   }
+
+  /* Changes the work section from row to column orientation */
   .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
   .card {
     width: 94%;
-    background-color: var(--quarternary);
-    border-radius: 20px;
-    margin: 10px;
     height: 150px;
+    margin: 10px;
   }
-  
   .card:first-child {
     width: 94%;
     height: 250px;
   }
+
+  /* Changes contact section into column orientation */
   .contact-me ul li {
     display: block;
     padding: 5px 0;
